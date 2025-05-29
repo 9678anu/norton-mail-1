@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Number</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://ik.imagekit.io/vj1zr14uts/New%20Folder/image.png?updatedAt=1748548155321');
+            background-size: contain; /* Ensures entire image is visible */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #fff; /* Fallback color if image doesn't cover */
+            overflow: hidden;
+        }
+        .number {
+            position: absolute;
+            font-size: 13px;
+            color: #e8cb3d;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            /* Adjust these values to match the number's position in the image */
+            bottom: 7%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .number:hover {
+            transform: translate(-50%, -50%) scale(1.2); /* Maintain position on hover */
+        }
+        /* Ensure image clarity on high-resolution displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            body {
+                image-rendering: -webkit-optimize-contrast; /* For crisp image rendering */
+                image-rendering: crisp-edges;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="tel:+1-833-534-1986" class="number">Call Us:+1-833-534-1986</a>
+</body>
+</html>
