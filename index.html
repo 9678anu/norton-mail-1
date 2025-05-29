@@ -20,15 +20,15 @@
         }
         .number {
             position: absolute;
-            font-size: 16px;
+            font-size: 24px; /* Use viewport units for responsive font size */
             color: #e8cb3d;
             text-decoration: none;
             font-weight: bold;
             font-family: Arial, sans-serif;
-            /* Adjust these values to match the number's position in the image */
             bottom: 3%;
             left: 50%;
             transform: translate(-50%, -50%);
+            white-space: nowrap; /* Prevent text wrapping */
         }
        
         /* Ensure image clarity on high-resolution displays */
@@ -36,6 +36,27 @@
             body {
                 image-rendering: -webkit-optimize-contrast; /* For crisp image rendering */
                 image-rendering: crisp-edges;
+            }
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 920px) {
+            .number {
+                font-size: 2vw; /* Slightly larger font for smaller screens */
+                bottom: 2%; /* Adjust position to avoid edge cutoff */
+            }
+        }
+        @media (max-width: 768px) {
+            .number {
+                font-size: 2vw; /* Slightly larger font for smaller screens */
+                bottom: 2%; /* Adjust position to avoid edge cutoff */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .number {
+                font-size: 2vw; /* Larger font for very small screens */
+                bottom: 2%; /* Further adjust position */
             }
         }
     </style>
